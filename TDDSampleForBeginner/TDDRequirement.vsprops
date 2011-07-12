@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<VisualStudioPropertySheet 
+	ProjectType="Visual C++" 
+	Version="8.00" 
+	Name="TDDRequirement"
+	>
+  <Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="&quot;$(GTestDir)include&quot;;&quot;$(GMockDir)include&quot;"
+	/>
+  <Tool
+    Name="VCLinkerTool"
+    AdditionalLibraryDirectories="&quot;$(GTestDir)lib&quot;;&quot;$(GMockDir)lib&quot;"
+  />
+  <UserMacro
+		Name="GTestDir"
+		Value="$(SolutionDir)dependencies/gtest-1.5.0/"
+	/>
+  <UserMacro
+    Name="GMockDir"
+    Value="$(SolutionDir)dependencies/gmock-1.5.0/"
+  />
+</VisualStudioPropertySheet>

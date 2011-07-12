@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TDDSample01", "TDDSample01\TDDSample01.vcproj", "{4CADF68B-F4DC-4671-9F95-8B6BBA0B3103}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solutionItems", "solutionItems", "{FC33B197-CD8B-477D-B31E-DBC763E94BE5}"
+	ProjectSection(SolutionItems) = preProject
+		TDDRequirement.vsprops = TDDRequirement.vsprops
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CADF68B-F4DC-4671-9F95-8B6BBA0B3103}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4CADF68B-F4DC-4671-9F95-8B6BBA0B3103}.Debug|Win32.Build.0 = Debug|Win32
+		{4CADF68B-F4DC-4671-9F95-8B6BBA0B3103}.Release|Win32.ActiveCfg = Release|Win32
+		{4CADF68B-F4DC-4671-9F95-8B6BBA0B3103}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
