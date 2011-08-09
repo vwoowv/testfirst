@@ -10,6 +10,8 @@
 // ToDo
 // $5 + 10Chf = $10(환율이 2:1)
 // $5 * 2 = $10
+// amount 노출 제거(private으로 전환)
+// Times 함수 변경
 
 CMCMoneyTester::CMCMoneyTester(void)
 {
@@ -25,23 +27,26 @@ public:
     CDollar(int iAmount);
     virtual ~CDollar(void) {}
 
-    void Times(int iMul);
+    int Times(int iMul);
 
+private:
     int amount; 
 };
 
-CDollar::CDollar(int iAmount) : amount(10)
+CDollar::CDollar(int iAmount) : amount(0)
 {
+    amount = iAmount;
 }
 
-void CDollar::Times(int iMul)
+int CDollar::Times(int iMul)
 {
+    return amount *= iMul;
 }
 
 TEST_F(CMCMoneyTester, TestMultiplication)
 {
     // 5 * 2 = 10
     CDollar* pFive = new CDollar(5);
-    pFive->Times(2);
-    ASSERT_EQ(10, pFive->amount);
+    int iResult = pFive->Times(2);
+    ASSERT_EQ(10, iResult);
 }
