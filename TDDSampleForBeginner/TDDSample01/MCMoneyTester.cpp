@@ -19,6 +19,25 @@ CMCMoneyTester::~CMCMoneyTester(void)
 {
 }
 
+class CDollar
+{
+public:
+    CDollar(int iAmount);
+    virtual ~CDollar(void) {}
+
+    void Times(int iMul);
+
+    int amount; 
+};
+
+CDollar::CDollar(int iAmount) : amount(10)
+{
+}
+
+void CDollar::Times(int iMul)
+{
+}
+
 TEST_F(CMCMoneyTester, TestMultiplication)
 {
     // 5 * 2 = 10
