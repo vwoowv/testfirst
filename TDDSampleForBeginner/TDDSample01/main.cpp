@@ -1,4 +1,4 @@
-#include "gmock/gmock.h"
+﻿#include "gmock/gmock.h"
 #include "gtest/gtest.h"
 
 TEST(TestCastTest, Test01)
