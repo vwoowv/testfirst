@@ -9,6 +9,8 @@
 
 // ToDo
 // $5 + 10Chf = $10(환율이 2:1)
+
+// 해결
 // $5 * 2 = $10
 // amount 노출 제거(private으로 전환)
 // Times 함수 변경. 결과의 객체화
@@ -48,14 +50,24 @@ CDollar CDollar::Times(int iMul)
 
 bool CDollar::Equal(CDollar& rValue)
 {
-    return true;
+    return (rValue.amount == amount);
 }
 
 TEST_F(CMCMoneyTester, TestMultiplication)
 {
     // 5 * 2 = 10
     CDollar Five(5);
-    CDollar Result = Five.Times(2);
+    CDollar Ten(10), Fifteen(15);
+    EXPECT_EQ(true, Ten.Equal(Five.Times(2)));
+    EXPECT_EQ(true, Fifteen.Equal(Five.Times(3)));
+}
+
+TEST_F(CMCMoneyTester, TestEquality)
+{
+    CDollar Five(5);
+    CDollar Five2(5);
     CDollar Ten(10);
-    ASSERT_EQ(true, Ten.Equal(Result));
+
+    EXPECT_EQ(true, Five.Equal(Five2));
+    EXPECT_EQ(false, Five.Equal(Ten));
 }
